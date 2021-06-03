@@ -12,23 +12,19 @@
 </head>
 
 <body style='margin: 0; overflow: hidden;'>
-    <a-scene
+
+     <a-scene
       vr-mode-ui="enabled: false"
       embedded
       arjs="sourceType: webcam; debugUIEnabled: false;"
+      gps-entity-place="longitude: 34.7302977; latitude: 36.6770821;"
     >
       <a-text
-        value="HELLO"
-        look-at="[0,0,0]"
+        value="Smart City lab - Augmented Reality."
+        look-at="[gps-camera]"
         scale="120 120 120"
         gps-entity-place="longitude: 34.7302977; latitude: 36.6770821;"
       ></a-text>
-          <a-entity cursor="fuse: true; fuseTimeout: 500"
-            gps-entity-place="longitude: 34.7302977; latitude: 36.6770821;"
-            position="0 0 -1"
-            geometry="primitive: ring; radiusInner: 0.02; radiusOuter: 0.03"
-            material="color: black; shader: flat">
-  </a-entity>
       <a-camera gps-camera rotation-reader> </a-camera>
     </a-scene>
 </body>
