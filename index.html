@@ -17,10 +17,8 @@
     <a-scene vr-mode-ui="enabled: false" embedded arjs='sourceType: webcam; sourceWidth:1280; sourceHeight:960; displayWidth: 1280; displayHeight: 960; debugUIEnabled: false;'>
         <a-camera gps-camera rotation-reader></a-camera>
         <a-entity gltf-model="./assets/magnemite/scene.gltf" rotation="45 90 180" scale="0.05 0.05 0.05" gps-entity-place="longitude: 34.7302977; latitude: 36.6770821;" animation-mixer/>
-        <a-entity
-            gps-entity-place="longitude: 34.7302977; latitude: 36.6770821;" 
-            geometry="primitive: plane; width: 4; height: auto"
-            material="color: blue"
-            text="value: This text will be 4 units wide."></a-entity>
+      <a-sky color="lightblue"></a-sky>
+      <a-text value="HIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII" font="custom-msdf.json" font-image="custom-msdf.png" negate="false" scale="2 2 1" position="-2 2 -4"></a-text>
+   
         </a-scene>
 </body>
