@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>AFRAME ONCLICK-URL</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+​
+    <!-- A FRAME -->
+  <script src="https://aframe.io/releases/0.8.2/aframe.min.js"></script>
+  <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.6.2/aframe/build/aframe-ar.js"></script>
+  <script src="https://rawgit.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"> </script>
+     <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" href="/style.css">
+    <!-- import the webpage's javascript file -->
+    <script src="/script.js" defer></script>
+  </head>  
+  <body>
+    <a-scene vr-mode-ui="enabled: false" embedded artoolkit='sourceType: webcam; detectionMode: mono; maxDetectionRate: 60; canvasWidth: 200; canvasHeight: 200' arjs='debugUIEnabled: false;'>
+
+        <a-entity position="0 0 0" gps-entity-place="latitude: 34.7302977 ; longitude: 36.6770821;">
+​
+            <a-image src="https://pbs.twimg.com/profile_images/927446347879292930/Fi0D7FGJ_400x400.jpg"  width="0.3" height="0.3" position="0.5 0 0" rotation="-90 0 0" shadow event-set__enter="_event: mouseenter; color: #76D7C4" event-set__leave="_event: mouseleave; color: #FFD700" navigate-on-click="url: https://www.google.com/">
+            </a-image>
+
+            <a-image src="https://cdn-images-1.medium.com/max/536/1*oORAGqcJB-2MBl0Dt65D4Q.png" width="0.3" height="0.3" position="-0.5 0 0" rotation="-90 0 0" shadow event-set__enter="_event: mouseenter; color: #76D7C4" event-set__leave="_event: mouseleave; color: #FFD700 " navigate-on-click="url: https://aframe.io/">
+                </a-image>
+​
+        </a-entity>
+​
+    <a-entity camera>
+        <a-entity cursor="rayOrigin: mouse;fuse: false;"></a-entity>
+    </a-entity>
+</a-scene>
+  </body>
+
+</html>
+​
