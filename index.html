@@ -26,29 +26,17 @@
               gps-projected-entity-place="latitude: 34.7302977 ; longitude: 36.6770821;"
             ></a-text>
         </a-scene> -->
-    
-    <a-scene
+        <a-scene
+        cursor='rayOrigin: mouse; fuse: true; fuseTimeout: 0;'
+        raycaster="objects: [gps-entity-place];"
         vr-mode-ui="enabled: false"
-		embedded
+        embedded
         arjs='sourceType: webcam; sourceWidth:1280; sourceHeight:960; displayWidth: 1280; displayHeight: 960; debugUIEnabled: false;'>
-       
-      <a-camera gps-camera rotation-reader> </a-camera>
-      <!--<a-assets gps-entity-place="latitude: 34.7302977 ; longitude: 36.6770821;">
-        <img id="test_img" src="./assets/marker.png">
-       </a-assets>-->
-      <a-assets>  
-         <a-asset-item id="animated-asset" src="../assets/Bunny_Lamp/Bunny_Lamp.gltf" gps-entity-place="latitude: 34.7302977 ; longitude: 36.6770821;"></a-asset-item>
-      </a-assets>
-      <!--<a-entity gltf-model="./assets/magnemite/scene.gltf" rotation="0 180 0" scale="0.075 0.075 0.075" gps-entity-place="latitude: 34.7302977 ; longitude: 36.6770821;" animation-mixer/>
-      <!-- latitude: 36.734508723020554 ; longitude: 34.72827938447279; -->
-      <!--<a-text
-        value="HELLO"
-        look-at="[gps-camera]"
-        scale="120 120 120"
-        gps-entity-place="latitude: 34.7302977 ; longitude: 36.6770821;"
-      ></a-text>
-      <!--<a-box color="yellow" gps-entity-place="latitude: 34.7302977 ; longitude: 36.6770821" scale="2 2 2" />-->
-    </a-scene>
-       
+            <a-assets>  
+                <a-asset-item id="animated-asset" src="./assets/Bunny_Lamp/Bunny_Lamp.gltf" gps-entity-place="latitude: 34.7302977 ; longitude: 36.6770821;"></a-asset-item>
+            </a-assets>
+            <a-camera gps-camera rotation-reader>
+            </a-camera>
+        </a-scene>
   </body>
 </html>
